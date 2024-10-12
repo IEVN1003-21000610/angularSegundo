@@ -5,6 +5,7 @@ import { HoroscopochinoComponent } from "./formularios/horoscopochino/horoscopoc
 
 import { ReactiveFormsModule } from '@angular/forms';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -12,7 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
      RouterOutlet,
      Ejemplo1Component, 
      HoroscopochinoComponent,
-     ReactiveFormsModule
+     ReactiveFormsModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

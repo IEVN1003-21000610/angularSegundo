@@ -1,49 +1,83 @@
-<form class="max-w-md mx-auto">
-    <h1>Datos personales</h1>
+<form class="max-w-md mx-auto" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <h1 class="flex justify-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-2xl dark:text-white">DATOS PERSONALES</h1>
+      <!--NOMBRE COMPLETO-->
+        <!--Nombre-->
     <div class="relative z-0 w-full mb-5 group">
         <input type="text" name="nombreu" id="nombre" formControlName="nombreu" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" Nombre " required />
         <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"></label>
     </div>
+        <!--Apellido paterno-->
     <div class="relative z-0 w-full mb-5 group">
         <input type="text" name="apellidop" id="apellidop" formControlName="apellidop" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" Apellido paterno" required />
         <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"></label>
     </div>
+        <!--Apellido materno-->
     <div class="relative z-0 w-full mb-5 group">
         <input type="text" name="apellidom" id="apellidom" formControlName="apellidom" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="Apellido materno" required />
         <label for="floating_repeat_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"></label>
     </div>
   
-    <h1>Fecha de nacimiento</h1>
-    <div class="grid md:grid-cols-2 md:gap-6">
+      <!--FECHA DE NACIMIENTO-->
+    <h1 class="flex justify-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-2xl dark:text-white">FECHA DE NACIMIENTO</h1>
+    <div class="grid md:grid-cols-3 md:gap-6">
+          <!--Dia-->
       <div class="relative z-0 w-full mb-5 group">
           <input type="number" name="diaN" id="diaN" formControlName="diaN" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="Dia" required />
           <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"></label>
       </div>
+          <!--Mes-->
       <div class="relative z-0 w-full mb-5 group">
           <input type="number" name="mesN" id="mesN" formControlName="mesN" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" Mes " required />
           <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"></label>
       </div>
+          <!--Año-->
       <div class="relative z-0 w-full mb-5 group">
         <input type="number" name="anioN" id="anioN" formControlName="anioN" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" Año " required />
         <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"></label>
       </div>
     </div>
     
-    <!-- Género -->
-    <div class="flex flex-wrap">
-        <div class="flex items-center me-4">
-            <input id="red-radio" type="radio" value="Femenino" formControlName="genero" class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-pink-500 dark:focus:ring-pink-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-            <label for="red-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Femenino</label>
-        </div>
-        <div class="flex items-center me-4">
-            <input id="green-radio" type="radio" value="Masculino" formControlName="genero" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-            <label for="green-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Masculino</label>
-        </div>
+   <!-- GENERO -->
+   <h1 class="flex justify-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-2xl dark:text-white">GENERO</h1>
+<div class="flex flex-wrap">
+      <!--Femenino-->
+    <div class="flex items-center me-4">
+        <input formControlName="genero" id="red-radio" type="radio" value="Femenino" class="flex justify-center w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-pink-500 dark:focus:ring-pink-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="red-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Femenino</label>
+    </div>
+      <!--Masculino-->
+    <div class="flex items-center me-4">
+        <input formControlName="genero" id="green-radio" type="radio" value="Masculino" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="green-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Masculino</label>
+    </div>
+</div>
+
+      <!--BOTON XD-->
+    <br>
+    <div class="flex justify-center">
+        <button type="submit" class="items-center-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Imprimir</button>
     </div>
     
-    <br>
-    <div>
-        <button type="button" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Imprimir</button>
-    </div>
   </form>
   
+
+  <!--IMPRESIOOOOOOOOOOOOOOOOOOON-->
+  <div class="max-w-md mx-auto flex justify-center px-4 pt-4">
+    <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div class="flex justify-end px-4 pt-4">
+      </div>
+      <div class="flex flex-col items-center pb-10">
+        <!--<img class="w-24 h-24 mb-3 rounded-full shadow-lg" [src]="imagenSignoChino || '/docs/images/people/profile-picture-3.jpg'" alt="{{ nombreJuntou }} image"/>-->
+        <!--<h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{{ nombreJuntou || 'Nombre' }}</h5>-->
+  
+        <div *ngIf="nombreJuntou && edadu !== undefined && signoChino" class="mt-4 text-center">
+          <p>Hola <strong>{{ nombreJuntou }}</strong></p>
+          <p>Tienes {{ edadu }} años</p>
+          <p>Tu signo chino es {{ signoChino }}</p>
+        </div>
+  
+        <img *ngIf="imagenSignoChino" [src]="imagenSignoChino" alt="{{ signoChino }}" class="mt-4">
+      </div>
+    </div>
+  </div>
+<!--<img [src]="imagenes[signoChino]" alt="Signo Chino">-->
